@@ -4,6 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.net.URI;
 import java.util.Date;
 
 /**
@@ -12,16 +13,16 @@ import java.util.Date;
  */
 @Document
 public class URLFetchResult {
+
     @Id
     private String id;
     private Date fetchdate;
     private Date last_modified;
-    @DBRef (lazy = true)
-    private RSSFeed  url;
+    private URI uri;
     private String etag;
     private int statusCode;
 
-
+/*
     public URLFetchResult(Date fetchdate, Date last_modified, String etag, RSSFeed url, int statusCode) {
         this.fetchdate =  fetchdate;
         this.last_modified = last_modified;
@@ -29,13 +30,18 @@ public class URLFetchResult {
         this.url = url;
         this.statusCode = statusCode;
     }
+*/
 
     public URLFetchResult() {
 
     }
 
-    public Date getFetchdate() {
-        return fetchdate;
+    public URLFetchResult(Date fetchdate, Date last_modified, String etag, URI uri, int statusCode) {
+        this.fetchdate =  fetchdate;
+        this.last_modified = last_modified;
+        this.etag = etag;
+        this.uri = uri;
+        this.statusCode = statusCode;
     }
 
     public Date getLast_modified() {
@@ -44,10 +50,6 @@ public class URLFetchResult {
 
     public String getEtag() {
         return etag;
-    }
-
-    public RSSFeed getUrl() {
-        return url;
     }
 
     public int getStatusCode() {
