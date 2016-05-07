@@ -62,6 +62,12 @@ public class RootController {
         return "";
     }
 
+    @RequestMapping("/")
+    @ResponseBody
+    public String index() {
+        return "hello";
+    }
+
     @RequestMapping("/groups")
     @ResponseBody
     public Set<String> getGroups() {
