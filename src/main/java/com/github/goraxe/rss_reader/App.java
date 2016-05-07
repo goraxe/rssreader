@@ -22,11 +22,11 @@ import java.util.concurrent.Executor;
 @SpringBootApplication
 @EnableMongoRepositories( basePackages = "com.github.goraxe.rss_reader.repositories.mongo")
 @EnableAsync
-class App implements AsyncConfigurer {
+public class App implements AsyncConfigurer {
 
 
     @Autowired
-    RSSFeedFetchService feedFetchService;
+    public RSSFeedFetchService feedFetchService;
 
 
     /*
