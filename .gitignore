@@ -4,3 +4,4 @@ target
 testdb*
 results/*
 *.opml
+.*.sw*
