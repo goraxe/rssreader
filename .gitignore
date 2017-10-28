@@ -5,3 +5,4 @@ testdb*
 results/*
 *.opml
 .*.sw*
+.travis.appengine.json
