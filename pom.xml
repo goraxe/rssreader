@@ -103,7 +103,7 @@
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-spring</artifactId>
             <scope>test</scope>
-            <version>1.2.4</version>
+            <version>1.2.6</version>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
