@@ -257,7 +257,7 @@
 
             <plugin>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>3.21.0</version>
                 <configuration>
                     <attach>true</attach>
 
